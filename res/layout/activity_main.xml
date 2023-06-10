@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <com.hqk38.StatusBarInsetsLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:background="@drawable/skin_header_bar_bg"
+    	android:fitsSystemWindows="true">
+    	<FrameLayout
+    	    android:layout_width="match_parent"
+    	    android:layout_height="50dp">
+		    <Button
+		        android:id="@+id/bluetooth"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:paddingLeft="16dp"
+		        android:paddingRight="10dp"
+		        android:background="@null"
+		        android:gravity="center_vertical"
+	    	    android:textColor="@color/skin_color_title_right_text"
+	    	    android:textSize="17dp"
+		        android:text="打开蓝牙" />
+		    <Button
+		        android:id="@+id/bluetooth_list"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:layout_gravity="right"
+		        android:paddingLeft="10dp"
+		        android:paddingRight="16dp"
+		        android:background="@null"
+		        android:gravity="center_vertical"
+	    	    android:textColor="@color/skin_color_title_right_text"
+	    	    android:textSize="17dp"
+		        android:text="设备列表" />
+		    <Button
+		        android:id="@+id/bluetooth_disconnect"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:layout_gravity="right"
+		        android:paddingLeft="10dp"
+		        android:paddingRight="16dp"
+		        android:background="@null"
+		        android:gravity="center_vertical"
+	    	    android:textColor="@color/skin_color_title_right_text"
+	    	    android:textSize="17dp"
+		        android:text="断开"
+		        android:visibility="gone"
+		        android:onClick="bluetooth_disconnect_click" />
+    	</FrameLayout>
+    </com.hqk38.StatusBarInsetsLayout>
+    
+    <ScrollView
+        android:id="@+id/listScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="#ebedf5">
+        <LinearLayout
+            android:id="@+id/listView1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="54dp"
+	        android:layout_marginRight="54dp"
+	        android:orientation="vertical">
+	        
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#ebedf5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ebedf5"
+        android:gravity="bottom">
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="14dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="@drawable/skin_aio_input_bg"
+            android:includeFontPadding="false"
+            android:textColor="#03081a"
+            android:textSize="17dp"
+            android:maxLines="6"
+            android:inputType="textMultiLine" />
+        <FrameLayout
+            android:layout_width="78dp"
+            android:layout_height="36dp">
+            <Button
+                android:id="@+id/fun_btn"
+	            android:layout_width="60dp"
+	            android:layout_height="34dp"
+	            android:layout_marginLeft="4dp"
+	            android:layout_marginTop="1dp"
+	            android:background="@drawable/dj"
+	            android:enabled="false"
+	            android:textColor="#ffffff"
+	            android:textSize="14dp"
+	            android:text="发送" />
+        </FrameLayout>
+        
+    </LinearLayout>
+
+    <com.hqk38.WindowInsetsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ebedf5"
+        android:fitsSystemWindows="true">
+        <TextView
+	        android:id="@+id/bluetooth_connectedDevice"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+            android:gravity="center"
+            android:textColor="#878b99"
+	        android:textSize="17dp" />
+    </com.hqk38.WindowInsetsLayout>
+
+</LinearLayout>
