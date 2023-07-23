@@ -36,7 +36,8 @@
 		        android:gravity="center_vertical"
 	    	    android:textColor="@color/skin_color_title_right_text"
 	    	    android:textSize="17dp"
-		        android:text="设备列表" />
+		        android:text="设备列表"
+		        android:visibility="gone" />
 		    <Button
 		        android:id="@+id/bluetooth_disconnect"
 		        android:layout_width="wrap_content"
